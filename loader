@@ -1,4 +1,2 @@
 # drop into ~/.bashrc
-curl 'raw.githubusercontent.com/B44ken/bashrc/main/script' -o '/etc/bashrc'
-chmod +x /etc/bashrc
-sh /etc/bashrc
+eval "$(curl https://raw.githubusercontent.com/B44ken/bashrc/main/script)"
