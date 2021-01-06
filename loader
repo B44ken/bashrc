@@ -1,4 +1,4 @@
 # drop into ~/.bashrc
-curl 'raw.githubusercontent.com/B44ken/bashrc/main/bashrc' -o '/etc/bashrc'
+curl 'raw.githubusercontent.com/B44ken/bashrc/main/script' -o '/etc/bashrc'
 chmod +x /etc/bashrc
 sh /etc/bashrc
