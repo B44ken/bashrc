@@ -1,7 +1,7 @@
-echo 'hello, world'
-
-w() { cmd.exe /C "$@"; }
+colour=6
 PS1=' \[$(tput setaf $colour)\]$(pwd | grep -Eo "[^/]+$") $ \['$(tput sgr0)'\]';
+
+win() { cmd.exe /C "$@"; }
 spotify() {
   curl -sX "GET" "https://api.spotify.com/v1/"$1 
     -H "Accept: application/json" 
