@@ -1,10 +1,27 @@
-colour=6
-PS1=' \[$(tput setaf $colour)\]$(pwd | grep -Eo "[^/]+$") $ \['$(tput sgr0)'\]';
+alias py='python3'
+alias csc='cmd.exe /C csc'
+
+colour=1
+FCEDIT=vim
+PS1='\[$(tput setaf $colour)\] $(pwd | grep -Eo "[^/]+$") $ \[$(tput sgr0)\]'
+DESK='/mnt/c/Users/BradB/Desktop'
 
 win() { cmd.exe /C "$@"; }
-spotify() {
-  curl -sX "GET" "https://api.spotify.com/v1/"$1 
-    -H "Accept: application/json" 
-    -H "Content-Type: application/json" 
-    -H "Authorization: Bearer "$token
+
+spotify() { curl -s 'https://api.spotify.com/v1/'$1 -H "Authorization: Bearer "$token; }
+
+getip() {
+	if [ $1 ]
+	then
+		ping $1 -c 1 | grep -Eo '[0-9\.]{8,}' -m 1
+	else
+		ifconfig | grep -Eo 'inet [0-9\.]+' | grep -Eo '[0-9\.]+' | grep -v '127.0.0.1'
+	fi
+}
+
+srv() {
+	old=$(pwd)
+	cd $1
+	sudo python3 -m http.server 80
+	cd $old
 }
