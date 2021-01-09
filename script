@@ -3,7 +3,7 @@ alias csc='cmd.exe /C csc'
 
 colour=1
 FCEDIT=vim
-PS1='\[$(tput setaf $colour)\] /W $ \[$(tput sgr0)\]'
+PS1='\[$(tput setaf $colour)\] \W $ \[$(tput sgr0)\]'
 DESK='/mnt/c/Users/BradB/Desktop'
 
 win() { cmd.exe /C "$@"; }
