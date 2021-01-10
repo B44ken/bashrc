@@ -1,3 +1,4 @@
 # drop into ~/.bashrc
 script='https://raw.githubusercontent.com/B44ken/bashrc/main/script'
-eval "$(curl -s $script)"
+curl $script?$(date +%s) -so ~/rc
+source ~/rc
