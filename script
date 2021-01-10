@@ -6,6 +6,9 @@ FCEDIT=vim
 PS1='\[$(tput setaf $colour)\] \W $ \[$(tput sgr0)\]'
 DESK='/mnt/c/Users/BradB/Desktop'
 
+export DENO_INSTALL="/$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 win() { cmd.exe /C "$@"; }
 
 spotify() { curl -s 'https://api.spotify.com/v1/'$1 -H "Authorization: Bearer "$token; }
