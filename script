@@ -1,7 +1,8 @@
 alias py='python3'
 alias csc='cmd.exe /C csc'
 
-colour=1
+termsettings='/mnt/c/Users/*/AppData/Local/Packages/Microsoft.WindowsTerminal*/LocalState/settings.json'
+
 FCEDIT=vim
 PS1='\[$(tput setaf $colour)\] \W $ \[$(tput sgr0)\]'
 DESK='/mnt/c/Users/BradB/Desktop'
