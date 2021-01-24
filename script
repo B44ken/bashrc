@@ -4,7 +4,7 @@ alias csc='cmd.exe /C csc'
 termsettings='/mnt/c/Users/*/AppData/Local/Packages/Microsoft.WindowsTerminal*/LocalState/settings.json'
 
 FCEDIT=vim
-PS1='\[$(tput setaf $colour)\] \W $ \[$(tput sgr0)\]'
+PS1='\[$(tput setaf $colour)\] \W \[$(tput sgr0)\]'
 DESK='/mnt/c/Users/BradB/Desktop'
 
 export DENO_INSTALL="/$HOME/.deno"
