@@ -2,3 +2,6 @@
 script='https://raw.githubusercontent.com/B44ken/bashrc/main/script'
 curl $script?$(date +%s) -so ~/rc
 source ~/rc
+
+echo 'set a ps1 colour in bashrc!'
+color=232
