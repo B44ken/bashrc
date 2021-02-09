@@ -1,11 +1,10 @@
 alias py='python3'
 alias csc='cmd.exe /C csc'
 
-termsettings='/mnt/c/Users/*/AppData/Local/Packages/Microsoft.WindowsTerminal*/LocalState/settings.json'
-
 FCEDIT=vim
 PS1='\[$(tput setaf $colour)\] \W \[$(tput sgr0)\]'
-DESK='/mnt/c/Users/BradB/Desktop'
+DESK='/mnt/c/Users/*/Desktop'
+termrc='/mnt/c/Users/*/AppData/Local/Packages/Microsoft.WindowsTerminal*/LocalState/settings.json'
 
 export DENO_INSTALL="/$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
