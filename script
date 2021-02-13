@@ -9,10 +9,13 @@ termrc='/mnt/c/Users/*/AppData/Local/Packages/Microsoft.WindowsTerminal*/LocalSt
 export DENO_INSTALL="/$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+# run windows command
 win() { cmd.exe /C "$@"; }
 
+# curl spotify api
 spotify() { curl -s 'https://api.spotify.com/v1/'$1 -H "Authorization: Bearer "$token; }
 
+# get ip of pc/domain
 getip() {
 	if [ $1 ]
 	then
@@ -22,9 +25,18 @@ getip() {
 	fi
 }
 
+# start file server
 srv() {
-	old=$(pwd)
+	old=$pwd
 	cd $1
 	sudo python3 -m http.server 80
+	cd $old
+}
+
+# clone from github
+cloneh() {
+	old=$pwd
+	mkdir -p ~/git/$1 && cd ~/git/$1
+	git clone https://github.com/$1/$2
 	cd $old
 }
