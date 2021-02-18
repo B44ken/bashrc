@@ -40,3 +40,10 @@ cloneh() {
 	git clone https://github.com/$1/$2
 	cd $old
 }
+
+#rename terminal window
+tname() { 
+	ORIG=$PS1;
+	TITLE="\[\e]2;$*\a\]";
+	PS1=${ORIG}${TITLE}
+}
