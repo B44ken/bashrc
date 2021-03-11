@@ -12,6 +12,12 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 # run windows command
 win() { cmd.exe /C "$@"; }
 
+# refresh bashrc script
+rfrc() {
+	curl $script?$(date +%s) -so ~/rc
+	. ~/rc
+}
+
 # curl spotify api
 spotify() { curl -s 'https://api.spotify.com/v1/'$1 -H "Authorization: Bearer "$token; }
 
