@@ -6,8 +6,8 @@ PS1='\[$(tput setaf $colour)\] \W \[$(tput sgr0)\]'
 DESK='/mnt/c/Users/*/Desktop'
 termrc='/mnt/c/Users/*/AppData/Local/Packages/Microsoft.WindowsTerminal*/LocalState/settings.json'
 
-export DENO_INSTALL="/$HOME/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
+# deno & go
+export PATH="/$HOME/.deno/bin:/usr/local/go/bin/:$PATH"
 
 # run windows command
 win() { cmd.exe /C "$@"; }
