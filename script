@@ -1,6 +1,7 @@
 alias sudo='sudo'
 alias py='python3'
 alias csc='cmd.exe /C csc'
+alias ls='ls --color=auto'
 
 FCEDIT=vim
 PS1='\[$(tput setaf $colour)\] \W \[$(tput sgr0)\]'
@@ -48,7 +49,7 @@ cloneh() {
 	cd $old
 }
 
-#rename terminal window
+# rename terminal window
 tname() { 
 	ORIG=$PS1;
 	TITLE="\[\e]2;$*\a\]";
