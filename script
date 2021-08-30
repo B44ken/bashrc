@@ -1,6 +1,5 @@
 alias sudo='sudo'
 alias py='python3'
-alias csc='cmd.exe /C csc'
 alias ls='ls --color=auto'
 
 FCEDIT=vim
